@@ -1,4 +1,4 @@
-import '../src/styles/globals.css';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
@@ -6,3 +6,4 @@ function MyApp({ Component, pageProps }) {
 
 
 export default MyApp;
+
