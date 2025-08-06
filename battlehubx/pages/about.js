@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Navbar from '../src/components/Navbar';
-import Footer from '../src/components/Footer';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function About() {
   return (
@@ -78,3 +78,4 @@ export default function About() {
   );
 
 }
+
