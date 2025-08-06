@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import TournamentCard from '../components/TournamentCard';
-import tournaments from '../data/tournaments';
+import Navbar from '../src/components/Navbar';
+import Footer from '../src/components/Footer';
+import TournamentCard from '../src/components/TournamentCard';
+import tournaments from '../src/data/tournaments';
 
 export default function Tournaments() {
   return (
@@ -28,4 +28,5 @@ export default function Tournaments() {
       <Footer />
     </>
   );
+
 }
