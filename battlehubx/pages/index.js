@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import TournamentCard from '../components/TournamentCard';
-import Button from '../components/Button';
-import tournaments from '../data/tournaments';
-import styles from '../styles/Home.module.css';
+import Navbar from '../src/components/Navbar';
+import Footer from '../src/components/Footer';
+import TournamentCard from '../src/components/TournamentCard';
+import Button from '../src/components/Button';
+import tournaments from '../src/data/tournaments';
+import styles from '../src/styles/Home.module.css';
 
 export default function Home() {
   const featuredTournaments = tournaments.slice(0, 4);
@@ -85,4 +85,5 @@ export default function Home() {
       <Footer />
     </>
   );
+
 }
