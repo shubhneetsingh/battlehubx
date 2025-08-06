@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../src/components/Navbar';
+import Footer from '../src/components/Footer';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function Contact() {
@@ -111,4 +111,5 @@ export default function Contact() {
       <Footer />
     </>
   );
+
 }
