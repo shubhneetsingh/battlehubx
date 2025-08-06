@@ -1,0 +1,23 @@
+/* Additional custom styles for the home page */
+.heroText {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.featuredSection {
+  background: linear-gradient(180deg, rgba(15, 15, 26, 0.9) 0%, rgba(30, 30, 45, 0.9) 100%);
+}
+
+.ctaSection {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.25rem;
+  }
+}
