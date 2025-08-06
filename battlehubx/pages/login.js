@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../src/components/Navbar';
+import Footer from '../src/components/Footer';
 
 export default function Login() {
   return (
@@ -86,4 +86,5 @@ export default function Login() {
       <Footer />
     </>
   );
+
 }
