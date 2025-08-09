@@ -19,4 +19,11 @@
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2"
   }
+
+}
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
 }
