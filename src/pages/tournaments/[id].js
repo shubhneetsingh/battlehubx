@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
-import tournaments from '../../../data/tournaments';
+import tournaments from '../../data/tournaments';
 
 export default function TournamentDetails() {
   const router = useRouter();
@@ -135,4 +135,5 @@ export default function TournamentDetails() {
       </main>
     </>
   );
+
 }
