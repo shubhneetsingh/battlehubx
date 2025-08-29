@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BATTLEHUBX | Coming Soon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>BATTLEHUBX | Coming Soon - The Future of Esports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -12,9 +12,17 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --primary: #6e45e2;
+            --secondary: #ff4e50;
+            --accent: #38f9d7;
+            --dark: #0a0a16;
+            --light: #b8b8d9;
+        }
+        
         body {
             font-family: 'Rajdhani', sans-serif;
-            background: #0a0a16;
+            background: var(--dark);
             color: #ffffff;
             min-height: 100vh;
             overflow-x: hidden;
@@ -44,6 +52,9 @@
             padding: 30px 0;
             position: relative;
             z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .logo {
@@ -52,8 +63,7 @@
             font-size: 32px;
             text-transform: uppercase;
             letter-spacing: 3px;
-            text-align: center;
-            background: linear-gradient(45deg, #6e45e2, #88d3ce);
+            background: linear-gradient(45deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 15px rgba(110, 69, 226, 0.4);
@@ -65,7 +75,7 @@
             position: relative;
             z-index: 10;
             text-align: center;
-            padding: 60px 0;
+            padding: 80px 0 100px;
         }
         
         h1 {
@@ -75,7 +85,7 @@
             text-transform: uppercase;
             margin-bottom: 20px;
             letter-spacing: 2px;
-            background: linear-gradient(45deg, #6e45e2, #ff4e50);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 20px rgba(255, 78, 80, 0.3);
@@ -84,11 +94,16 @@
         .subtitle {
             font-size: 1.5rem;
             margin-bottom: 40px;
-            color: #b8b8d9;
+            color: var(--light);
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
+        }
+        
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
         }
         
         /* Countdown timer */
@@ -113,7 +128,7 @@
             font-family: 'Orbitron', sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
-            color: #6e45e2;
+            color: var(--primary);
             text-shadow: 0 0 10px rgba(110, 69, 226, 0.7);
         }
         
@@ -121,7 +136,7 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #b8b8d9;
+            color: var(--light);
             margin-top: 5px;
         }
         
@@ -151,7 +166,7 @@
         }
         
         input:focus {
-            border-color: #6e45e2;
+            border-color: var(--primary);
             box-shadow: 0 0 15px rgba(110, 69, 226, 0.5);
         }
         
@@ -159,7 +174,7 @@
             padding: 15px 30px;
             border: none;
             border-radius: 4px;
-            background: linear-gradient(45deg, #6e45e2, #ff4e50);
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
             color: white;
             font-family: 'Orbitron', sans-serif;
             font-weight: 500;
@@ -192,7 +207,7 @@
             justify-content: center;
             background: rgba(20, 20, 40, 0.6);
             border: 1px solid rgba(110, 69, 226, 0.4);
-            color: #b8b8d9;
+            color: var(--light);
             font-size: 1.2rem;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -200,7 +215,7 @@
         
         .social-link:hover {
             background: rgba(110, 69, 226, 0.2);
-            color: #6e45e2;
+            color: var(--primary);
             transform: translateY(-5px);
             box-shadow: 0 0 15px rgba(110, 69, 226, 0.5);
         }
@@ -226,7 +241,7 @@
         .orb-1 {
             width: 300px;
             height: 300px;
-            background: #6e45e2;
+            background: var(--primary);
             top: 10%;
             left: 10%;
             animation: float 15s infinite ease-in-out;
@@ -235,10 +250,29 @@
         .orb-2 {
             width: 400px;
             height: 400px;
-            background: #ff4e50;
+            background: var(--secondary);
             bottom: 5%;
             right: 10%;
             animation: float 18s infinite ease-in-out reverse;
+        }
+        
+        .orb-3 {
+            width: 200px;
+            height: 200px;
+            background: var(--accent);
+            top: 50%;
+            left: 80%;
+            animation: float 12s infinite ease-in-out;
+        }
+        
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 30px 0;
+            color: var(--light);
+            font-size: 0.9rem;
         }
         
         /* Animations */
@@ -277,28 +311,44 @@
                 flex-wrap: wrap;
             }
             
+            .countdown-item {
+                min-width: 70px;
+                padding: 15px;
+            }
+            
+            .countdown-number {
+                font-size: 1.8rem;
+            }
+            
             .form-group {
                 flex-direction: column;
             }
+            
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="glowing-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
     </div>
     
     <div id="particles-js"></div>
     
     <div class="container">
         <header>
-            <div class="logo">BATTLEHUBX</div>
+            <div class="logo">BattleHubX</div>
         </header>
         
         <section class="main-content">
-            <h1>FOR THE GAMERS. BY THE GAMERS.</h1>
-            <p class="subtitle">We're building the next generation esports platform with tournaments, rankings, and competitive gameplay across all major titles.</p>
+            <h1>for the gamers. by the gamers.</h1>
+            <p class="subtitle">We're building the ultimate <span class="highlight">esports platform</span> for competitive gamers. Join the revolution with tournaments, rankings, and the next generation of competitive gameplay.</p>
             
             <div class="countdown">
                 <div class="countdown-item">
@@ -320,10 +370,10 @@
             </div>
             
             <div class="notify-form">
-                <p class="subtitle">Get notified when we launch</p>
+                <p class="subtitle">Get early access to exclusive features</p>
                 <div class="form-group">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit">Notify Me</button>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
+                    <button type="submit" id="notify-btn">Notify Me</button>
                 </div>
             </div>
             
@@ -342,10 +392,13 @@
                 </a>
             </div>
         </section>
+        
+        <footer>
+            <p>&copy; 2023 BattleHubX. All rights reserved. | The future of esports competition</p>
+        </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
         // Initialize particles.js
         particlesJS('particles-js', {
@@ -458,11 +511,11 @@
         updateCountdown();
         
         // Form submission
-        document.querySelector('button').addEventListener('click', function() {
-            const email = document.querySelector('input').value;
+        document.getElementById('notify-btn').addEventListener('click', function() {
+            const email = document.getElementById('email').value;
             if (email && isValidEmail(email)) {
                 alert('Thanks! We\'ll notify you when we launch.');
-                document.querySelector('input').value = '';
+                document.getElementById('email').value = '';
             } else {
                 alert('Please enter a valid email address.');
             }
@@ -472,6 +525,11 @@
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(email);
         }
+        
+        // Add DOMContentLoaded to ensure everything loads properly
+        document.addEventListener('DOMContentLoaded', function() {
+            // Additional initialization if needed
+        });
     </script>
 </body>
 </html>
